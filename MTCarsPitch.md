@@ -2,41 +2,57 @@ K-Means Demo on MTCars Data
 ========================================================
 author: Michael R. D'Amour  
 date: 11/22/14
+transition: rotate
+navigation: slide
 
 K-Means Demo on Multivariate Data
 ========================================================
-
+incremental: true
  
 MTCars Shiny App lets you
-- Interact with the standard R K-Means clustering algorithm
-- Watch clustering decisions in real time on lots of data
+- Interact with standard R K-Means clustering
+- Watch clustering decisions animate in real-time - arrow in lower right
 ![Figure 1](mtcars_qsec_hp.png)
 
 
 
-Intuition on K-Means
+Interactive Intuition on K-Means
 ========================================================
-The MTcars K-Means App allows  
+transition: concave
 
-- Any var of the R-builtin *mtcars* dataset  
-    - for x-axis  
-    - for y-axis 
-    - using slide-out menus
-- Choice of number of clusters  
+R code shows simplicity of clustering use  
+Code here reduced for format, eval = F here  
+Fully reproducible code at github.com/mikedamour
 
-(In a kinder world, RPresenter would allow me to paste a .png here or run Shiny locally and echo here.)
+```r
+shinyServer(function(input, output) {
+    selectedData <- reactive({
+        mtcars[, c(input$xcol, 
+                   input$ycol)]})
+    clusters <- 
+        reactive({kmeans(selectedData(), 
+                         input$clusters)})
+    output$plot1 <- renderPlot({
+        plot(selectedData(), 
+            col=clusters()$cluster, pch=19)
+        points(clusters()$centers, pch=4)})
+})
+```
 
 Interactive 
 ===
+transition: zoom
+
 - As you choose, data changes immediately
 - K-means chooses obvious and not-so-obvious clusters 
 - Cluster centers marked prominently  
-
 ![Figure 1](mtcars_mpg_wt_6.png)
 
 
-Auto Intuition, Maybe?
+... and Maybe Some Auto Intuition?
 ===
+transition: rotate
+
 Interesting visualization of relationship of performance to car features. Try various combinations.  
 - weight vs. mpg
 - horsepower or displacement vs. quarter mile time

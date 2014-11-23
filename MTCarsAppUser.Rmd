@@ -4,19 +4,20 @@ author: "Michael R. D'Amour"
 date: "Friday, November 21, 2014"
 output: html_document
 ---
-##Using the K-Means for Cars App  
+###Using the K-Means for Cars App  
 With this Shiny application, you can interact with the standard R K-Means clustering algorithm, watching it cluster data in real time. The algorithm is run on the Motor Trend Cars data base with all variables available on the x or y axis and the ability to choose the number of clusters desired.
-
+![Figure 1](mtcars_qsec_hp.png)
 You can run the application at https://mikedamour.shinyapps.io/ShinyProject.
 
 ###Interaction  
 The MTcars App allows you to  
 
-- Choose any one of the *R-builtin mtcars* dataset for your x-axis and your y-axis using slide-out menus.
-- Choose the number of clusters you would like to have fit on the scatterplot data.
-- As you choose variables, you will see the data change immediately, the algorithm choosing the tightest clusters and marking their centers prominently.
+- Choose any one of the *R-builtin mtcars* dataset for your x-axis and your y-axis using slide-out menus.  
+- Choose the number of clusters you would like to have fit on the scatterplot data via slider.  
+- As you choose variables, you will see the data change immediately, the algorithm choosing the tightest clusters and marking their centers prominently.  
+- Pressing the slider arrow will cause the chosen set of variables to be clustered using 1 through 9 clusters.
 
 The app also provides an interesting visualization of the relationship of automobile performance to various car features.
 
 **Attribution**  
-This application is based with light modifications on the Iris Data k-means template by Joe Cheng <joe@rstudio.com> at the RStudio Gallery site.
+This application is based on the Iris Data k-means template by Joe Cheng <joe@rstudio.com> at the RStudio Gallery site.

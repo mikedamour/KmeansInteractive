@@ -1,5 +1,4 @@
 name: ShinyProject
 account: mikedamour
-bundleId: 82210
-url:
-     http://mikedamour.shinyapps.io/ShinyProject
+bundleId: 82456
+url: http://mikedamour.shinyapps.io/ShinyProject
