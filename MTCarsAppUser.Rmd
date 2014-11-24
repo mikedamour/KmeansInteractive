@@ -1,21 +1,23 @@
 ---
-title: "Motor Trend Cars as Basis for K-Means Demo"
+title: "K-Means Interactive on *mtcars* Dataset"
 author: "Michael R. D'Amour"
 date: "Friday, November 21, 2014"
 output: html_document
 ---
-###Using the K-Means for Cars App  
-With this Shiny application, you can interact with the standard R K-Means clustering algorithm, watching it cluster data in real time. The algorithm is run on the Motor Trend Cars data base with all variables available on the x or y axis and the ability to choose the number of clusters desired.
+###K-Means Interactive  
+
+With K-Means Interactive, a Shiny application, you can watch the standard R K-Means clustering algorithm operate in real time. The algorithm is run on the Motor Trend *mtcars* data base with all variables available for plotting and the ability to choose the number of clusters.
 ![Figure 1](mtcars_qsec_hp.png)
-You can run the application at https://mikedamour.shinyapps.io/ShinyProject.
+**Run K-Means Interactive at** *https://mikedamour.shinyapps.io/ShinyProject*  
+**See the project repo at** *https://github.com/mikedamour/KmeansInteractive*
 
-###Interaction  
-The MTcars App allows you to  
+###Interacting with K-Means
+The K-Means app lets you   
 
-- Choose any one of the *R-builtin mtcars* dataset for your x-axis and your y-axis using slide-out menus.  
+- Choose any of the R-builtin *mtcars* dataset for your X or Y Feature using pull-down menus.  
 - Choose the number of clusters you would like to have fit on the scatterplot data via slider.  
-- As you choose variables, you will see the data change immediately, the algorithm choosing the tightest clusters and marking their centers prominently.  
-- Pressing the slider arrow will cause the chosen set of variables to be clustered using 1 through 9 clusters.
+- As you choose features and cluster numbers, the data will update immediately. K-means chooses the clusters and marks their centers prominently.  
+- Press the slider arrow  to sequence through clustering selections 1 to 9.
 
 The app also provides an interesting visualization of the relationship of automobile performance to various car features.
 

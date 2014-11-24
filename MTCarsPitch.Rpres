@@ -1,4 +1,4 @@
-K-Means Demo on MTCars Data
+K-Means Interactive on R's Motor Trend Data
 ========================================================
 author: Michael R. D'Amour  
 date: 11/22/14
@@ -11,7 +11,7 @@ incremental: true
  
 MTCars Shiny App lets you
 - Interact with standard R K-Means clustering
-- Watch clustering decisions animate in real-time - arrow in lower right
+- Watch clustering decisions animate in real-time
 ![Figure 1](mtcars_qsec_hp.png)
 
 
@@ -21,7 +21,7 @@ Interactive Intuition on K-Means
 transition: concave
 
 R code shows simplicity of clustering use  
-Code here reduced for format, eval = F here  
+Code here reduced for format, eval = FALSE   
 Fully reproducible code at github.com/mikedamour
 ```{r eval = FALSE}
 shinyServer(function(input, output) {

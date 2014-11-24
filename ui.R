@@ -1,7 +1,7 @@
 library(shiny)
 
 shinyUI(pageWithSidebar(
-    headerPanel('Motor Trends Cars Feature Clustering'),
+    headerPanel('Motor Trends mtcars Feature Clustering'),
     sidebarPanel(
         selectInput('xcol', 'X Feature', names(mtcars), 
                     selected = names(mtcars)[[7]]),
